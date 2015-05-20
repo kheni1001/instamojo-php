@@ -69,6 +69,7 @@ class Instamojo {
         $options = array();
         $options[CURLOPT_HTTPHEADER] = $headers;
         $options[CURLOPT_RETURNTRANSFER] = true;
+        $options[CURLOPT_SSL_VERIFYPEER] = false;
         
         if($method == 'POST') {
             $options[CURLOPT_POST] = 1;
